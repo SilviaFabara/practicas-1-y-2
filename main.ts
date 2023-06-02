@@ -25,12 +25,12 @@ input.onButtonPressed(Button.A, function () {
     }
     basic.showIcon(IconNames.Happy)
 })
-input.onButtonPressed(Button.B, function () {
-    basic.showString("Hello!")
-    basic.pause(100)
-    if (input.isGesture(Gesture.Shake)) {
-        basic.showIcon(IconNames.SmallSquare)
-    } else {
-        basic.showIcon(IconNames.Square)
-    }
+input.onGesture(Gesture.ScreenUp, function () {
+    basic.showIcon(IconNames.Target)
+})
+input.onGesture(Gesture.Shake, function () {
+    basic.showIcon(IconNames.Scissors)
+})
+input.onGesture(Gesture.TiltLeft, function () {
+    basic.showIcon(IconNames.Square)
 })
